@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Rekod Penggunaan Air</title>
+</head>
+<body>
+
 <div>
     <link href="./style.css" rel="stylesheet" />
     <div class="home-container">
@@ -14,7 +22,7 @@
       <!--<h1 class="home-text07">Laman Utama</h1>-->
 
       <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+      <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
           <br><br>
           <ol>
@@ -26,7 +34,48 @@
       </section>
       <!-- End Breadcrumbs -->
       
+      <div class="formContainer">
+        <h2>Rekod Penggunaan Air</h2>
+        
+        <form name="waterConsumptionForm" method="post" action="">
+          <label for="bulan">Bulan:</label>
+          <select id="course" name="course">
+            <option value="null">Bulan</option>
+            <option value="Januari">Januari</option>
+            <option value="Februari">Februari</option>
+            <option value="Mac">Mac</option>
+            <option value="April">April</option>
+            <option value="Mei">Mei</option>
+            <option value="Jun">Jun</option>
+            <option value="Julai">Julai</option>
+            <option value="Ogos">Ogos</option>
+            <option value="September">September</option>
+            <option value="Oktober">Oktober</option>
+            <option value="November">November</option>
+            <option value="Disember">Disember</option>
+          </select>
+          <br><br>
+
+          <label for="hariSemasa">Jumlah Hari Semasa:</label>
+	  	    <input type="number" name="hariSemasa" placeholder="e.g. 31" required>
+          <br><br>
+          <label for="faktorProrata">Faktor Prorata:</label>
+	  	    <input type="number" name="faktorProrata" placeholder="e.g. 1.0033" required>
+          <br><br>
+          <label for="penggunaanm3">Penggunaan (m3):</label>
+	  	    <input type="number" name="penggunaanm3" placeholder="e.g. 17.00" required>
+          <br><br>
+          <label for="penggunaanRm">Penggunaan (RM):</label>
+	  	    <input type="text" name="penggunaanm3" placeholder="e.g. 13.60" required>
+          <br><br>
+          <label for="bilSemasa">Bil Semasa:</label>
+	  	    <input type="image">
+          <br><br>
+          <input type="submit" value="Kemas Kini">
+        </form>
       </div>
+      
     </div>
   </div>
-  
+  </body>
+</html>

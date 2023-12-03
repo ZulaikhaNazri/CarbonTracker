@@ -269,3 +269,21 @@ a:hover {
   color: #655356;
   content: "/";
 }
+
+.formContainer{
+  top: 154px;
+  right: 46px;
+  width: 1000px;
+  height: 736px;
+  display:grid;
+  position: absolute;
+  box-shadow: 5px 5px 10px 5px #d4d4d4;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.formContainer h2{
+  padding-top: 40px;
+  justify-content: center;
+  display: flex;
+}
