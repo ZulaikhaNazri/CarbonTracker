@@ -287,3 +287,28 @@ a:hover {
   justify-content: center;
   display: flex;
 }
+
+.electric-image {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+}
+
+.panduan-image {
+  width: 503px;
+  height: 222px;
+}
+
+.electric-text {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  height: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
