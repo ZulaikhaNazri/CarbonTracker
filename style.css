@@ -75,31 +75,52 @@ tr:nth-child(even) {
     position: absolute;
   }
   .home-text03 {
-    top: 241px;
-    left: 75px;
+    top: 232px;
+    left: 73px;
     color: rgb(255, 255, 255);
     position: absolute;
   }
   .home-text04 {
-    top: 276px;
-    left: 98px;
+    top: 261px;
+    left: 96px;
     color: rgb(255, 255, 255);
     position: absolute;
     font-size: 14px;
   }
   .home-text05 {
-    top: 308px;
-    left: 75px;
+    top: 284px;
+    left: 97px;
     color: rgb(255, 255, 255);
     position: absolute;
+    font-size: 14px;
   }
   .home-text06 {
-    top: 348px;
-    left: 75px;
+    top: 307px;
+    left: 97px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-size: 14px;
+  }
+  .home-text07 {
+    top: 329px;
+    left: 97px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-size: 14px;
+  }
+  .home-text08 {
+    top: 360px;
+    left: 72px;
     color: rgb(255, 255, 255);
     position: absolute;
   }
-  .home-text07 {
+  .home-text20 {
+    top: 393px;
+    left: 71px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+  }
+  .home-text10 {
     left: 84px;
     color: rgb(255, 255, 255);
     bottom: 44px;
