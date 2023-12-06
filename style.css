@@ -8,6 +8,25 @@ a:hover {
   text-decoration: none;
 }
 
+table {
+  top: 200px; /* Adjust the top property as needed */
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+
+td, th {
+  border: 1px solid #141414;
+  text-align: left;
+  padding: 30px; /* Adjust the padding property as needed */
+}
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 .home-container {
     width: 100%;
     display: flex;
@@ -51,7 +70,7 @@ a:hover {
   }
   .home-text02 {
     top: 199px;
-    left: 77px;
+    left: 74px;
     color: rgb(255, 255, 255);
     position: absolute;
   }
@@ -62,26 +81,28 @@ a:hover {
     position: absolute;
   }
   .home-text04 {
-    top: 285px;
+    top: 276px;
+    left: 98px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-size: 14px;
+  }
+  .home-text05 {
+    top: 308px;
     left: 75px;
     color: rgb(255, 255, 255);
     position: absolute;
   }
-  .home-text05 {
-    top: 327px;
-    left: 76px;
-    color: rgb(255, 255, 255);
-    position: absolute;
-  }
   .home-text06 {
-    left: 84px;
+    top: 348px;
+    left: 75px;
     color: rgb(255, 255, 255);
-    bottom: 44px;
     position: absolute;
   }
   .home-text07 {
-    top: 36px;
-    left: 342px;
+    left: 84px;
+    color: rgb(255, 255, 255);
+    bottom: 44px;
     position: absolute;
   }
   .home-container1 {
