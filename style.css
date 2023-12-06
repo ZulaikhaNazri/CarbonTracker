@@ -10,7 +10,6 @@ a:hover {
 
 table {
   top: 200px; /* Adjust the top property as needed */
-  width: 100%;
   display: flex;
   position: absolute;
   justify-content: center;
