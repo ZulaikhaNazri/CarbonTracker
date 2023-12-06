@@ -312,3 +312,37 @@ a:hover {
   padding: 20px;
 }
 
+.analisis-image {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+}
+
+.analisis-image {
+  width: 800px;
+  height: 550px;
+}
+
+.analisis-text {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  height: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.rp-text {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  height: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
