@@ -23,7 +23,11 @@ td, th {
 
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #f9dfdf;
+}
+
+tr:nth-child(odd) {
+  background-color: #e6c9c9;
 }
 
 
