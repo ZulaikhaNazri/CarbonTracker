@@ -119,7 +119,7 @@
             </a>
           </li>
           <li>
-            <a href="components-breadcrumbs.html">
+            <a href="BorangKitarSemula.jsp">
               <i class="bi bi-circle"></i><span>Kegunaan Bahan Kitar Semula</span>
             </a>
           </li>
@@ -134,7 +134,7 @@
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
+        <a class="nav-link collapsed" href="RekodPenyertaan.jsp">
           <i class="bi bi-calendar-month"></i>
           <span>Rekod Penyertaan</span>
         </a>

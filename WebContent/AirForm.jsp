@@ -78,7 +78,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="UserIndex.jsp">
           <i class="bi bi-grid"></i>
           <span>Laman Utama</span>
         </a>
@@ -113,15 +113,15 @@
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="RekodBulanan.jsp">
-          <i class="bi bi-folder2"></i>
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-calendar-month"></i>
           <span>Rekod Bulanan</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="RekodPenyertaan.jsp">
-          <i class="bi bi-calendar-month"></i>
+        <a class="nav-link collapsed" href="pages-faq.html">
+          <i class="bi bi-folder2"></i>
           <span>Rekod Penyertaan</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
@@ -144,7 +144,7 @@
       <h1>Penggunaan Air</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="UserIndex.html">Laman Utama</a></li>
+          <li class="breadcrumb-item"><a href="UserIndex.jsp">Laman Utama</a></li>
           <li class="breadcrumb-item">Analisis Karbon</li>
           <li class="breadcrumb-item active">Penggunaan Air</li>
         </ol>
@@ -153,9 +153,77 @@
 
     <section class="section dashboard">
       <div class="row">
+     	  <div class="col-lg-8">
+          <div class="row">
+	          	<div class="card">
+	           	 <div class="card-body">
+	           	 <h5 class="card-title">Pilih : </h5>
+					<button type="button" class="btn btn-outline-primary active">Borang Penggunaan Air</button>
+					<button type="button" class="btn btn-outline-primary">Rekod Penggunaan Air</button>
+				 </div>
+				</div>
+			<div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Borang Penggunaan Air</h5>
 
-       
+              <!-- General Form Elements -->
+              <form>
+              	<div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Bulan</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Pilih</option>
+                      <option value="Januari">Januari</option>
+                      <option value="Februari">Februari</option>
+                      <option value="Mac">Mac</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Bilangan Hari</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Pilih</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Faktor Prorata</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="e.g. 1.0033">
+                  </div>
+                </div>
+                 <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Penggunaan (m3):</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                 <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Penggunaan (RM):</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
 
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label"></label>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Hantar Borang</button>
+                  </div>
+                </div>
+
+              </form><!-- End General Form Elements -->
+
+            </div>
+          </div>
+			
+       	</div>
+		</div>
       </div>
     </section>
 

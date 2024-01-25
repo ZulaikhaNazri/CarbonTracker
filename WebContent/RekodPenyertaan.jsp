@@ -78,7 +78,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="UserIndex.jsp">
           <i class="bi bi-grid"></i>
           <span>Laman Utama</span>
         </a>
@@ -105,7 +105,7 @@
             </a>
           </li>
           <li>
-            <a href="KitarSemulaForm.jsp">
+            <a href="BorangKitarSemula.jsp">
               <i class="bi bi-circle"></i><span>Kegunaan Bahan Kitar Semula</span>
             </a>
           </li>
