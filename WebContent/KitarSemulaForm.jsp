@@ -105,7 +105,7 @@
             </a>
           </li>
           <li>
-            <a href="components-breadcrumbs.html">
+            <a href="KitarSemulaForm.jsp">
               <i class="bi bi-circle"></i><span>Kegunaan Bahan Kitar Semula</span>
             </a>
           </li>
@@ -141,12 +141,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Penggunaan Air</h1>
+      <h1>Kegunaan Bahan Kitar Semula</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="UserIndex.html">Laman Utama</a></li>
           <li class="breadcrumb-item">Analisis Karbon</li>
-          <li class="breadcrumb-item active">Penggunaan Air</li>
+          <li class="breadcrumb-item active">Kegunaan Bahan Kitar Semula</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
