@@ -159,70 +159,51 @@
 	          	<div class="card">
 	           	 <div class="card-body">
 	           	 <h5 class="card-title">Pilih : </h5>
-					<button type="button" class="btn btn-outline-primary active">Borang Penggunaan Air</button>
-					<button type="button" class="btn btn-outline-primary" ><a href="RekodAir.jsp">Rekod Penggunaan Air</a></button>
+					<button type="button" class="btn btn-outline-primary"><a href="BorangAir.jsp">Borang Penggunaan Air</a></button>
+					<button type="button" class="btn btn-outline-primary active">Rekod Penggunaan Air</button>
 				 </div>
 				</div>
-			<div class="card">
+			
+				<div class="card">
             <div class="card-body">
-              <h5 class="card-title">Borang Penggunaan Air</h5>
+              <h5 class="card-title">Rekod Penggunaan Air</h5>
 
-              <!-- General Form Elements -->
-              <c:if test="${currentView ne 'update' and currentView ne 'getById'}">
-              <form action="<c:url value='/water/add'/>" method="post">
-              	<div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Bulan</label>
-                  <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example" name = "bulan">
-                      <option selected>Pilih</option>
-                      <option value="Januari">Januari</option>
-                      <option value="Februari">Februari</option>
-                      <option value="Mac">Mac</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Bilangan Hari</label>
-                  <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example" name = "bilangan_hari">
-                      <option selected>Pilih</option>
-                      <option value="28">28</option>
-                      <option value="29">29</option>
-                      <option value="30">30</option>
-                      <option value="31">31</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Faktor Prorata</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="faktor_prorata" placeholder="e.g. 1.0033">
-                  </div>
-                </div>
-                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Penggunaan Air(m�):</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="jumlah_air">
-                  </div>
-                </div>
-                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Bayaran Penggunaan (RM):</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="jumlah_bayaran">
-                  </div>
-                </div>
+              <!-- Table with stripped rows -->
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Bulan</th>
+                    <th scope="col">Bilangan Hari</th>
+                    <th scope="col">Faktor Prorata</th>
+                    <th scope="col">Jumlah Penggunaan Air(m³)</th>
+                   	<th scope="col">Jumlah Bayaran (RM)</th>
+                   	<th scope="col">Jumlah Karbon(KgCO₂)</th>
+                   	<th scope="col">Ubah/Padam</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <c:forEach items="${wList}" var="water" >
+				<tr>
+					<td>${water.id}</td>
+					<td>${water.bulan}</td>
+					<td>${water.bilangan_hari}</td>
+					<td>${water.faktor_prorata}</td>
+					<td>${water.jumlah_air}</td>
+					<td>${water.jumlah_bayaran}</td>
+					<td>${water.jumlah_karbon}</td>
+					<td><a class="button" href="<c:url value='/water/update?id=${water.id}'/>">Ubah</a>
+						<a class="button" href="<c:url value='/water/delete?id=${water.id}'/>">Padam</a>
+					</td>
+				</tr>
+				</c:forEach>
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
 
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label"></label>
-                  <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Hantar Borang</button>
-                  </div>
-                </div>
-
-              </form><!-- End General Form Elements -->
-			</c:if>
             </div>
           </div>
+           
 			
        	</div>
 		</div>

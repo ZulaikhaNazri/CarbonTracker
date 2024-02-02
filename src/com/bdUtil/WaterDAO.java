@@ -18,7 +18,7 @@ public class WaterDAO {
 	public DataSource getDataSource() {
 		DataSource ds = null;
 		
-		String dbURL = "jdbc:mysql://localhost:3306/carbonTracker";
+		String dbURL = "jdbc:mysql://localhost:3306/carbontracker";
 		String username = "root";
 		String password = "";
 		

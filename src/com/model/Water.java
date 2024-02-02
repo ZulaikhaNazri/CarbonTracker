@@ -12,9 +12,29 @@ public class Water {
 	
 	User user;
 	
+	public Water() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Water(String id, String userId, String bulan, int bilangan_hari, double faktor_prorata, double jumlah_air,
+			double jumlah_bayaran) {
+		super();
+		this.id = id;
+		setUserID(userId);
+		this.bulan = bulan;
+		this.bilangan_hari = bilangan_hari;
+		this.faktor_prorata = faktor_prorata;
+		this.jumlah_air = jumlah_air;
+		this.jumlah_bayaran = jumlah_bayaran;
+	}
+	
 	public String getUserID() {
 		String userid = user.getId();
 		return userid;
+	}
+	
+	public void setUserID(String userId) {
+		user.setId(userId);
 	}
 	
 	public User getUser() {
@@ -65,5 +85,6 @@ public class Water {
 	public void setJumlah_karbon(double jumlah_karbon) {
 		this.jumlah_karbon = jumlah_karbon;
 	}
+
 	
 }
