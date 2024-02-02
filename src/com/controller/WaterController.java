@@ -7,10 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.stereotype.Controller;
+
 /**
  * Servlet implementation class WaterController
  */
 @WebServlet("/WaterController")
+@Controller
 public class WaterController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

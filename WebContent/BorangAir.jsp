@@ -95,7 +95,7 @@
             </a>
           </li>
           <li>
-            <a href="AirForm.jsp">
+            <a href="BorangAir.jsp">
               <i class="bi bi-circle"></i><span>Penggunaan Air</span>
             </a>
           </li>
@@ -198,13 +198,13 @@
                   </div>
                 </div>
                  <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Penggunaan (m3):</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Penggunaan Air(m3):</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
                 </div>
                  <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Penggunaan (RM):</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Bayaran Penggunaan (RM):</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
