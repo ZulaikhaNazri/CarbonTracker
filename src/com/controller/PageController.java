@@ -10,50 +10,55 @@ public class PageController {
 	
 	@RequestMapping("/")
 	protected ModelAndView getindex( ) {
-		ModelAndView model = new ModelAndView("UserIndex");
+		ModelAndView model = new ModelAndView("LoginPage");
 		return model;
-	
 	}
 	
-	@RequestMapping("/Home")
+	@RequestMapping("/Register")
+	protected ModelAndView getRegisterPage( ) {
+		ModelAndView model = new ModelAndView("RegisterPage");
+		return model;
+	}
+	
+	@RequestMapping("/LamanUtama")
 	protected ModelAndView getUserindex( ) {
 		ModelAndView model = new ModelAndView("UserIndex");
 		return model;
-	
 	}
 	
 	@RequestMapping("/BorangAir")
 	protected ModelAndView getBorangAir( ) {
 		ModelAndView model = new ModelAndView("BorangAir");
 		return model;
-	
 	}
 	
 	@RequestMapping("/BorangKitarSemula")
 	protected ModelAndView getBorangKitarSemula( ) {
 		ModelAndView model = new ModelAndView("BorangKitarSemula");
 		return model;
-	
 	}
 	
 	@RequestMapping("/RekodBulanan")
 	protected ModelAndView getRekodBulanan( ) {
 		ModelAndView model = new ModelAndView("RekodBulanan");
 		return model;
-	
 	}
 	
 	@RequestMapping("/RekodPenyertaan")
 	protected ModelAndView getRekodPenyertaan( ) {
 		ModelAndView model = new ModelAndView("RekodPenyertaan");
 		return model;
-	
 	}
 	
-//	@RequestMapping("/RekodAir")
-//	protected ModelAndView getRekodAir( ) {
-//		ModelAndView model = new ModelAndView("RekodAir");
-//		return model;
-//	
-//	}
+	@RequestMapping("/RekodAir")
+	protected ModelAndView getRekodAir( ) {
+		ModelAndView model = new ModelAndView("RekodAir");
+		return model;
+	}
+	
+	@RequestMapping("/Profile")
+	protected ModelAndView getProfile( ) {
+		ModelAndView model = new ModelAndView("Profile");
+		return model;
+	}
 }

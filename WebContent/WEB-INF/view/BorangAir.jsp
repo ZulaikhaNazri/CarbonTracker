@@ -31,8 +31,8 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="Home" class="logo d-flex align-items-center">
-        <img src="/CarbonTracker/resources/assets/img/logo.png" alt="">
+      <a href="LamanUtama" class="logo d-flex align-items-center">
+        <img src="resources/assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">CarbonTracker</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -46,22 +46,32 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="resources/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Zulaikha Nazri</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">${loggedInUser.name}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Zulaikha Nazri</h6>
-              <span>Web Designer</span>
+              <h6>${loggedInUser.name}</h6>
+              <span>${loggedInUser.category}</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="Profile">
+                <i class="bi bi-person"></i>
+                <span>Profile Saya</span>
+              </a>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="logout">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+                <span>Log Keluar</span>
               </a>
             </li>
 
@@ -79,7 +89,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="Home">
+        <a class="nav-link " href="LamanUtama">
           <i class="bi bi-grid"></i>
           <span>Laman Utama</span>
         </a>
@@ -90,11 +100,6 @@
           <i class="bi bi-graph-up"></i><span>Analisis Karbon</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="components-alerts.html">
-              <i class="bi bi-circle"></i><span>Analisis Karbon Keseluruhan</span>
-            </a>
-          </li>
           <li>
             <a href="BorangAir">
               <i class="bi bi-circle"></i><span>Penggunaan Air</span>
@@ -128,7 +133,7 @@
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
+        <a class="nav-link collapsed" href="Profile">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
@@ -145,7 +150,7 @@
       <h1>Penggunaan Air</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="Home">Laman Utama</a></li>
+          <li class="breadcrumb-item"><a href="LamanUtama">Laman Utama</a></li>
           <li class="breadcrumb-item">Analisis Karbon</li>
           <li class="breadcrumb-item active">Penggunaan Air</li>
         </ol>
@@ -197,7 +202,7 @@
                   </div>
                 </div>
                  <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Penggunaan Air(m³):</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Penggunaan Air(mï¿½):</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="jumlah_air">
                   </div>
