@@ -39,30 +39,30 @@ public class WaterDAO {
 		}
 		
 		//getByID
-		public Water getById(String id){
-			String sql = "select * from instructor where id = ?";
+		public Water getById(int id){
+			String sql = "select * from water where id = ?";
 			Water water = jdbct.queryForObject(sql, new BeanPropertyRowMapper<Water>(Water.class), id);
 			return water; 
 		}
 		
 		//add
 		public int add(Water water){
-			String sql = "insert into water (id, userId, bulan, bilangan_hari, faktor_prorata, jumlah_air, jumlah_bayaran, jumlah_karbon) values (?, ?, ?, ?, ?, ?, ?, ?)";
-			Object args[] = {water.getId(),water.getUserID(), water.getBulan(), water.getBilangan_hari(), water.getFaktor_prorata(), water.getJumlah_air(), water.getJumlah_bayaran(), water.getJumlah_karbon()};
+			String sql = "insert into water (id, userId, tarikh, bilangan_hari, faktor_prorata, jumlah_air, jumlah_bayaran, jumlah_karbon) values (?, ?, ?, ?, ?, ?, ?, ?)";
+			Object args[] = {water.getId(),water.getUserID(), water.gettarikh(), water.getBilangan_hari(), water.getFaktor_prorata(), water.getJumlah_air(), water.getJumlah_bayaran(), water.getJumlah_karbon()};
 			int rowAffected = jdbct.update(sql, args);
 			return rowAffected;
 		}
 		
 		//delete
-		public int delete(String id) {
+		public int delete(int id) {
 		    String sql = "DELETE FROM water WHERE id = ?";
 		    int rowAffected = jdbct.update(sql, id);
 		    return rowAffected;
 		}
 		// update
 		public int update(Water water) {
-		    String sql = "UPDATE water SET id=?, userId=?, bulan=?, bilangan_hari=?, faktor_prorata=?, jumlah_air=?, jumlah_bayaran=?, jumlah_karbon=? WHERE id=?";
-		    Object[] args = {water.getId(),water.getUserID(), water.getBulan(), water.getBilangan_hari(), water.getFaktor_prorata(), water.getJumlah_air(), water.getJumlah_bayaran(), water.getJumlah_karbon() };
+		    String sql = "UPDATE water SET tarikh=?, bilangan_hari=?, faktor_prorata=?, jumlah_air=?, jumlah_bayaran=?, jumlah_karbon=? WHERE id=?";
+		    Object[] args = {water.gettarikh(), water.getBilangan_hari(), water.getFaktor_prorata(), water.getJumlah_air(), water.getJumlah_bayaran(), water.getJumlah_karbon() };
 		    int rowAffected = jdbct.update(sql, args);
 		    return rowAffected;
 		}

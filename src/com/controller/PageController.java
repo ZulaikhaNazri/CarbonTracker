@@ -50,10 +50,10 @@ public class PageController {
 	
 	}
 	
-	@RequestMapping("/RekodAir")
-	protected ModelAndView getRekodAir( ) {
-		ModelAndView model = new ModelAndView("RekodAir");
-		return model;
-	
-	}
+//	@RequestMapping("/RekodAir")
+//	protected ModelAndView getRekodAir( ) {
+//		ModelAndView model = new ModelAndView("RekodAir");
+//		return model;
+//	
+//	}
 }

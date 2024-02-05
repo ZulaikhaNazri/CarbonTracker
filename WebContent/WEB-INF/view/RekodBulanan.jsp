@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -261,7 +262,7 @@
                 <td>24</td>
                 <td>25</td>
                 <td>26</td>
-                <td>27</td>
+                <td>27  <a href="<c:url value='RekodAir/'/>">Rekod Air [ID = 11]</a></td>
             </tr>
             <tr>
                 <td>28</td>
