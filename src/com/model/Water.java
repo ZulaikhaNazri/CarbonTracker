@@ -2,8 +2,9 @@ package com.model;
 
 public class Water {
 	
-	private String id;
-	private String bulan;
+	private int id;
+	private int userId;
+	private String tarikh;
 	private int bilangan_hari;
 	private double faktor_prorata;
 	private double jumlah_air;
@@ -16,25 +17,25 @@ public class Water {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Water(String id, String userId, String bulan, int bilangan_hari, double faktor_prorata, double jumlah_air,
+	public Water(int id, String tarikh, int bilangan_hari, double faktor_prorata, double jumlah_air,
 			double jumlah_bayaran) {
 		super();
 		this.id = id;
-		setUserID(userId);
-		this.bulan = bulan;
+		this.tarikh = tarikh;
 		this.bilangan_hari = bilangan_hari;
 		this.faktor_prorata = faktor_prorata;
 		this.jumlah_air = jumlah_air;
 		this.jumlah_bayaran = jumlah_bayaran;
 	}
 	
-	public String getUserID() {
-		String userid = user.getId();
+	public int getUserID() {
+		int userid = user.getId();
 		return userid;
 	}
 	
-	public void setUserID(String userId) {
-		user.setId(userId);
+	public void setUserID(int userId) {
+		user = new User(userId);
+		this.userId = userId;
 	}
 	
 	public User getUser() {
@@ -43,17 +44,17 @@ public class Water {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
-	public String getBulan() {
-		return bulan;
+	public String gettarikh() {
+		return tarikh;
 	}
-	public void setBulan(String bulan) {
-		this.bulan = bulan;
+	public void settarikh(String tarikh) {
+		this.tarikh = tarikh;
 	}
 	public int getBilangan_hari() {
 		return bilangan_hari;
