@@ -30,7 +30,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="Home" class="logo d-flex align-items-center">
+      <a href="LamanUtama" class="logo d-flex align-items-center">
         <img src="resources/assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">CarbonTracker</span>
       </a>
@@ -52,6 +52,16 @@
             <li class="dropdown-header">
               <h6>Zulaikha Nazri</h6>
               <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="Profile">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -78,7 +88,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="Home">
+        <a class="nav-link " href="LamanUtama">
           <i class="bi bi-grid"></i>
           <span>Laman Utama</span>
         </a>
@@ -127,7 +137,7 @@
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
+        <a class="nav-link collapsed" href="Profile">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
@@ -144,7 +154,7 @@
       <h1>Kegunaan Bahan Kitar Semula</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="Home">Laman Utama</a></li>
+          <li class="breadcrumb-item"><a href="LamanUtama">Laman Utama</a></li>
           <li class="breadcrumb-item">Analisis Karbon</li>
           <li class="breadcrumb-item active">Kegunaan Bahan Kitar Semula</li>
         </ol>

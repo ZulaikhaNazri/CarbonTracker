@@ -8,21 +8,22 @@
 <title>Carbon Tracker</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-<link href="CarbonTracker/assets/img/favicon.png" rel="icon">
-<link href="CarbonTracker/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+<link href="resources/assets/img/favicon.png" rel="icon">
+<link href="resources/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="CarbonTracker/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="CarbonTracker/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="CarbonTracker/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="CarbonTracker/assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="CarbonTracker/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="CarbonTracker/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="CarbonTracker/assets/vendor/simple-datatables/style.css" rel="stylesheet">
-  <link href="CarbonTracker/assets/css/style.css" rel="stylesheet">
+  <link href="resources/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="resources/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="resources/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="resources/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="resources/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="resources/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="resources/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="resources/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -30,8 +31,8 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="CarbonTracker/assets/img/logo.png" alt="">
+      <a href="LamanUtama" class="logo d-flex align-items-center">
+        <img src="resources/assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">CarbonTracker</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -44,7 +45,7 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="CarbonTracker/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src="resources/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">Zulaikha Nazri</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -52,6 +53,16 @@
             <li class="dropdown-header">
               <h6>Zulaikha Nazri</h6>
               <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="Profile">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -78,7 +89,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="LamanUtama">
           <i class="bi bi-grid"></i>
           <span>Laman Utama</span>
         </a>
@@ -95,7 +106,7 @@
             </a>
           </li>
           <li>
-            <a href="BorangAir.jsp">
+            <a href="BorangAir">
               <i class="bi bi-circle"></i><span>Penggunaan Air</span>
             </a>
           </li>
@@ -105,7 +116,7 @@
             </a>
           </li>
           <li>
-            <a href="BorangKitarSemula.jsp">
+            <a href="BorangKitarSemula">
               <i class="bi bi-circle"></i><span>Kegunaan Bahan Kitar Semula</span>
             </a>
           </li>
@@ -113,21 +124,21 @@
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="RekodBulanan.jsp">
+        <a class="nav-link collapsed" href="RekodBulanan">
           <i class="bi bi-calendar-month"></i>
           <span>Rekod Bulanan</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="RekodPenyertaan.jsp">
+        <a class="nav-link collapsed" href="RekodPenyertaan">
           <i class="bi bi-folder2"></i>
           <span>Rekod Penyertaan</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
+        <a class="nav-link collapsed" href="Profile">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
@@ -144,8 +155,8 @@
       <h1>Laman Utama</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Laman Utama</li>
+          <li class="breadcrumb-item"></li>
+          <li class="breadcrumb-item active"><a href="LamanUtama">Laman Utama</a></li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -454,35 +465,35 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                        <th scope="row"><a href="#"><img src="resources/assets/img/product-1.jpg" alt=""></a></th>
                         <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
                         <td>$64</td>
                         <td class="fw-bold">124</td>
                         <td>$5,828</td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-2.jpg" alt=""></a></th>
+                        <th scope="row"><a href="#"><img src="resources/assets/img/product-2.jpg" alt=""></a></th>
                         <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
                         <td>$46</td>
                         <td class="fw-bold">98</td>
                         <td>$4,508</td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-3.jpg" alt=""></a></th>
+                        <th scope="row"><a href="#"><img src="resources/assets/img/product-3.jpg" alt=""></a></th>
                         <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
                         <td>$59</td>
                         <td class="fw-bold">74</td>
                         <td>$4,366</td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-4.jpg" alt=""></a></th>
+                        <th scope="row"><a href="#"><img src="resources/assets/img/product-4.jpg" alt=""></a></th>
                         <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
                         <td>$32</td>
                         <td class="fw-bold">63</td>
                         <td>$2,016</td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#"><img src="CarbonTracker/assets/img/product-5.jpg" alt=""></a></th>
+                        <th scope="row"><a href="#"><img src="resources/assets/img/product-5.jpg" alt=""></a></th>
                         <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
                         <td>$79</td>
                         <td class="fw-bold">41</td>
@@ -597,17 +608,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="CarbonTracker/assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="CarbonTracker/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="CarbonTracker/assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="CarbonTracker/assets/vendor/echarts/echarts.min.js"></script>
-  <script src="CarbonTracker/assets/vendor/quill/quill.min.js"></script>
-  <script src="CarbonTracker/assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="CarbonTracker/assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="CarbonTracker/assets/vendor/php-email-form/validate.js"></script>
+  <script src="resources/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="resources/assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="resources/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="resources/assets/vendor/quill/quill.min.js"></script>
+  <script src="resources/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="resources/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="resources/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="CarbonTracker/assets/js/main.js"></script>
+  <script src="resources/assets/js/main.js"></script>
 
 </body>
 </html>
