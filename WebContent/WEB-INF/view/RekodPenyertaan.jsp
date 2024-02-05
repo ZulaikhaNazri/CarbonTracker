@@ -1,3 +1,4 @@
+<%@ page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -143,84 +144,190 @@
 
   </aside><!-- End Sidebar-->
 
-  <main id="main" class="main">
+ <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Rekod Penyertaan</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="LamanUtama">Laman Utama</a></li>
-          <li class="breadcrumb-item active">Rekod Penyertaan</li>
-        </ol>
-      </nav>
+        <h1>Rekod Penyertaan</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="LamanUtama">Laman Utama</a></li>
+                <li class="breadcrumb-item active">Rekod Penyertaan</li>
+            </ol>
+        </nav>
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-      <div class="row">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Table with stripped rows</h5>
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title"><a href="RekodRecycle/">Bahan Kitar Semula</a></h5>
 
-              <!-- Table with stripped rows -->
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Start Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Abu Jahal</td>
-                    <td>Designer</td>
-                    <td>28</td>
-                    <td>2016-05-25</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Harry Maguire</td>
-                    <td>Developer</td>
-                    <td>35</td>
-                    <td>2014-12-05</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Sabri Yunus</td>
-                    <td>Finance</td>
-                    <td>45</td>
-                    <td>2011-08-12</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Cole Palmer</td>
-                    <td>HR</td>
-                    <td>34</td>
-                    <td>2012-06-11</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Raheem Sterling</td>
-                    <td>Dynamic Division Officer</td>
-                    <td>47</td>
-                    <td>2011-04-19</td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- End Table with stripped rows -->
+                    <!-- Table with stripped rows -->
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Tarikh</th>
+                            <th scope="col">Jumlah Karbon</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
+                        <% 
+                        try {
+                            // Step 1: Load the JDBC driver
+                            Class.forName("com.mysql.cj.jdbc.Driver");
+
+                            // Step 2: Establish a connection to the database
+                            String dbURL = "jdbc:mysql://localhost:3306/carbontracker";
+                            String username = "root";
+                            String password = "";
+                            Connection conn = DriverManager.getConnection(dbURL, username, password);
+
+                            // Step 3: Retrieve data from the recycling table
+                            String sql = "SELECT id, tarikh, jumlah_carbon FROM recycle";
+                            Statement statement = conn.createStatement();
+                            ResultSet result = statement.executeQuery(sql);
+
+                            // Step 4: Display data in the table
+                            while(result.next()) {
+                                out.println("<tr>");
+                                out.println("<th scope='row'>" + result.getInt("id") + "</th>");
+                                out.println("<td>" + result.getString("tarikh") + "</td>");
+                              out.println("<td>" + result.getDouble("jumlah_carbon") + "</td>");
+                                out.println("</tr>");
+                            }
+
+                            // Step 5: Close the database connection
+                            result.close();
+                            statement.close();
+                            conn.close();
+                        } catch (ClassNotFoundException | SQLException e) {
+                            e.printStackTrace();
+                        }
+                        %>
+
+                        </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                   
+
+                </div>
             </div>
-          </div>
-       
-
-      </div>
+        </div>
     </section>
+                       <section class="section dashboard">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="RekodAir/">Air</a></h5>
 
-  </main><!-- End #main -->
+                    <!-- Table with stripped rows -->
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Tarikh</th>
+                            <th scope="col">Jumlah Karbon</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
+                        <% 
+                        try {
+                            // Step 1: Load the JDBC driver
+                            Class.forName("com.mysql.cj.jdbc.Driver");
+
+                            // Step 2: Establish a connection to the database
+                            String dbURL = "jdbc:mysql://localhost:3306/carbontracker";
+                            String username = "root";
+                            String password = "";
+                            Connection conn = DriverManager.getConnection(dbURL, username, password);
+
+                            // Step 3: Retrieve data from the recycling table
+                            String sql = "SELECT id, tarikh, jumlah_karbon FROM water";
+                            Statement statement = conn.createStatement();
+                            ResultSet result = statement.executeQuery(sql);
+
+                            // Step 4: Display data in the table
+                            while(result.next()) {
+                                out.println("<tr>");
+                                out.println("<th scope='row'>" + result.getInt("id") + "</th>");
+                                out.println("<td>" + result.getString("tarikh") + "</td>");
+                              out.println("<td>" + result.getDouble("jumlah_karbon") + "</td>");
+                                out.println("</tr>");
+                            }
+
+                            // Step 5: Close the database connection
+                            result.close();
+                            statement.close();
+                            conn.close();
+                        } catch (ClassNotFoundException | SQLException e) {
+                            e.printStackTrace();
+                        }
+                        %>
+
+                        </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                    
+                      <section class="section dashboard">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="RekodAir/">Elektrik</a></h5>
+
+                    <!-- Table with stripped rows -->
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Tarikh</th>
+                            <th scope="col">Jumlah Karbon</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <% 
+                        try {
+                            // Step 1: Load the JDBC driver
+                            Class.forName("com.mysql.cj.jdbc.Driver");
+
+                            // Step 2: Establish a connection to the database
+                            String dbURL = "jdbc:mysql://localhost:3306/carbontracker";
+                            String username = "root";
+                            String password = "";
+                            Connection conn = DriverManager.getConnection(dbURL, username, password);
+
+                            // Step 3: Retrieve data from the recycling table
+                            String sql = "SELECT id, tarikh, jumlah_karbon FROM electric";
+                            Statement statement = conn.createStatement();
+                            ResultSet result = statement.executeQuery(sql);
+
+                            // Step 4: Display data in the table
+                            while(result.next()) {
+                                out.println("<tr>");
+                                out.println("<th scope='row'>" + result.getInt("id") + "</th>");
+                                out.println("<td>" + result.getString("tarikh") + "</td>");
+                              out.println("<td>" + result.getDouble("jumlah_karbon") + "</td>");
+                                out.println("</tr>");
+                            }
+
+                            // Step 5: Close the database connection
+                            result.close();
+                            statement.close();
+                            conn.close();
+                        } catch (ClassNotFoundException | SQLException e) {
+                            e.printStackTrace();
+                        }
+                        %>
+
+                        </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                    
+
+</main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
