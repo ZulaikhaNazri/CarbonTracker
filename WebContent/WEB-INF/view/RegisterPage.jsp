@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +37,7 @@
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="" class="logo d-flex align-items-center w-auto">
+                <a href="/CarbonTracker/" class="logo d-flex align-items-center w-auto">
                   <img src="resources/assets/img/logo.png" alt="">
                   <span class="d-none d-lg-block">CarbonTracker</span>
                 </a>
@@ -72,7 +73,7 @@
                     
                     <div class="col-12">
                       <label for="Category" class="form-label">Kategori</label>
-	                  <select class="form-select" id="category" required>
+	                  <select class="form-select" name="category" id="category" required>
 	                    <option selected disabled value="">Pilih...</option>
 	                    <option>A1: Perumahan Bertingkat di MBIP</option>
 	                    <option>A2: Perumahan Bertanah di MBIP</option>
@@ -84,7 +85,7 @@
 		             </div>
 
                     <div class="col-12">
-                      <label for="yourUsername" class="form-label">Nama Pengguna</label>
+                      <label for="username" class="form-label">Nama Pengguna</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
                         <input type="text" name="username" class="form-control" id="username" required>
@@ -110,7 +111,7 @@
                       <button class="btn btn-primary w-100" type="submit">Daftar Akaun</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Sudah mendaftar akaun? <a href="Login">Log Masuk</a></p>
+                      <p class="small mb-0">Sudah mendaftar akaun? <a href="/CarbonTracker/">Log Masuk</a></p>
                     </div>
                   </form>
 
@@ -145,9 +146,26 @@
   <script src="resources/assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="resources/assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="resources/assets/vendor/php-email-form/validate.js"></script>
+  
+  <!-- Function JS Files -->
+  <script src="resources/assets/js/popup.js"></script>
 
   <!-- Template Main JS File -->
   <script src="resources/assets/js/main.js"></script>
+  
+  <script>
+        // Check if success or error messages exist and display corresponding popups
+        var successMessage = "${message}";
+        var errorMessage = "${error}";
+
+        if (successMessage) {
+            showSuccessPopup(successMessage);
+        }
+
+        if (errorMessage) {
+            showErrorPopup(errorMessage);
+        }
+    </script>
 
 </body>
 </html>

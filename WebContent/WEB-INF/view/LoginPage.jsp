@@ -51,8 +51,7 @@
                     <p class="text-center small">Sila masukkan nama pengguna dan kata laluan untuk log masuk</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate action="/CarbonTracker/submit">
-
+                  <form class="row g-3 needs-validation" novalidate action="/CarbonTracker/submit" method="POST">
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Nama pengguna</label>
                       <div class="input-group has-validation">
@@ -110,6 +109,23 @@
 
   <!-- Template Main JS File -->
   <script src="resources/assets/js/main.js"></script>
+  
+  <!-- Function JS Files -->
+  <script src="resources/assets/js/popup.js"></script>
+  
+  <script>
+        // Check if success or error messages exist and display corresponding popups
+        var successMessage = "${message}";
+        var errorMessage = "${error}";
+
+        if (successMessage) {
+            showSuccessPopup(successMessage);
+        }
+
+        if (errorMessage) {
+            showErrorPopup(errorMessage);
+        }
+    </script>
 
 </body>
 </html>

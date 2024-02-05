@@ -49,8 +49,8 @@ public class UserDAO {
 
     // Add a new user to the database
     public int addUser(User user) {
-        String sql = "INSERT INTO user (id, name, address, email, category, username, password) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        Object args[] = {user.getId(), user.getName(), user.getAddress(), user.getEmail(), user.getCategory(), user.getUsername(), user.getPassword()};
+        String sql = "INSERT INTO user (name, address, email, category, username, password) VALUES (?, ?, ?, ?, ?, ?)";
+        Object args[] = {user.getName(), user.getAddress(), user.getEmail(), user.getCategory(), user.getUsername(), user.getPassword()};
         return jdbc.update(sql, args);
     }
 
