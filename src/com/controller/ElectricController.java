@@ -61,8 +61,8 @@ public class ElectricController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public ModelAndView add(@RequestParam ("id")String id, 
-    						@RequestParam ("userId") String userId, 
+    public ModelAndView add(@RequestParam ("id")int id, 
+    						@RequestParam ("userId") int userId, 
     						@RequestParam ("bulan")String bulan, 
     						@RequestParam ("bilangan_hari") int bilangan_hari, 
     						@RequestParam ("faktor_prorata") double faktor_prorata, 
@@ -96,7 +96,7 @@ public class ElectricController {
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public ModelAndView update(	@RequestParam ("id")String id, 
-								@RequestParam ("userId") String userId, 
+								@RequestParam ("userId") int userId, 
 								@RequestParam ("bulan")String bulan, 
 								@RequestParam ("bilangan_hari") int bilangan_hari, 
 								@RequestParam ("faktor_prorata") double faktor_prorata, 

@@ -6,6 +6,7 @@ com\bdUtil\UserDAO.class
 com\controller\UserController.class
 com\model\Electric.class
 com\model\User.class
+com\bdUtil\AdminDAO.class
 com\controller\PageController.class
 com\bdUtil\WaterDAO.class
 com\model\Admin.class

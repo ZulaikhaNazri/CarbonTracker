@@ -9,8 +9,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class PageController {
 	
 	@RequestMapping("/")
-	protected ModelAndView getindex( ) {
+	protected ModelAndView getIndex( ) {
 		ModelAndView model = new ModelAndView("LoginPage");
+		return model;
+	}
+	
+	@RequestMapping("/AdminIndex")
+	protected ModelAndView getAdminIndex( ) {
+		ModelAndView model = new ModelAndView("AdminIndex");
 		return model;
 	}
 	
@@ -21,7 +27,7 @@ public class PageController {
 	}
 	
 	@RequestMapping("/LamanUtama")
-	protected ModelAndView getUserindex( ) {
+	protected ModelAndView getUserIndex( ) {
 		ModelAndView model = new ModelAndView("UserIndex");
 		return model;
 	}
@@ -77,6 +83,12 @@ public class PageController {
 	@RequestMapping("/Profile")
 	protected ModelAndView getProfile( ) {
 		ModelAndView model = new ModelAndView("Profile");
+		return model;
+	}
+	
+	@RequestMapping("/ProfileAdmin")
+	protected ModelAndView getAdminProfile( ) {
+		ModelAndView model = new ModelAndView("ProfileAdmin");
 		return model;
 	}
 }

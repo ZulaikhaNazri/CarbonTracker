@@ -9,21 +9,21 @@
 <title>Carbon Tracker</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-<link href="resources/assets/img/favicon.png" rel="icon">
-<link href="resources/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="/CarbonTracker/resources/assets/img/favicon.png" rel="icon">
+<link href="/CarbonTracker/resources/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="resources/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="resources/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="resources/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="resources/assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="resources/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="resources/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="resources/assets/vendor/simple-datatables/style.css" rel="stylesheet">
-  <link href="resources/assets/css/style.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -165,7 +165,7 @@
 	           	 <div class="card-body">
 	           	 <h5 class="card-title">Pilih : </h5>
 					<button type="button" class="btn btn-outline-primary active">Borang Penggunaan Air</button>
-					<button type="button" class="btn btn-outline-primary" ><a href="RekodAir">Rekod Penggunaan Air</a></button>
+					<button type="button" class="btn btn-outline-primary" ><a href="RekodAir/">Rekod Penggunaan Air</a></button>
 				 </div>
 				</div>
 			<div class="card">
@@ -173,26 +173,14 @@
               <h5 class="card-title">Borang Penggunaan Air</h5>
 
               <!-- General Form Elements -->
-              <c:if test="${currentView ne 'update' and currentView ne 'getById'}">
-              <form action="<c:url value='/water/add'/>" method="post">
+             
+              <form action="<c:url value='/RekodAir/add'/>" method="post">
               	<div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Bulan</label>
+                  <label class="col-sm-2 col-form-label">tarikh</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example" name = "bulan">
-                      <option selected>Pilih</option>
-                      <option value="Januari">Januari</option>
-                      <option value="Februari">Februari</option>
-                      <option value="Mac">Mac</option>
-                      <option value="April">April</option>
-                      <option value="May">May</option>
-                      <option value="June">June</option>
-                      <option value="July">July</option>
-                      <option value="August">August</option>
-                      <option value="September">September</option>
-                      <option value="October">October</option>
-                      <option value="November">November</option>
-                      <option value="December">December</option>
-                    </select>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="tarikh" placeholder="e.g : 1/1/2024">
+                  </div>
                   </div>
                 </div>
                 <div class="row mb-3">
@@ -214,7 +202,7 @@
                   </div>
                 </div>
                  <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Penggunaan Air(m³):</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Penggunaan Air(mï¿½):</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="jumlah_air">
                   </div>
@@ -234,7 +222,7 @@
                 </div>
 
               </form><!-- End General Form Elements -->
-			</c:if>
+		
             </div>
           </div>
 			
@@ -262,17 +250,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="resources/assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="resources/assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="resources/assets/vendor/echarts/echarts.min.js"></script>
-  <script src="resources/assets/vendor/quill/quill.min.js"></script>
-  <script src="resources/assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="resources/assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="resources/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/quill/quill.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="resources/assets/js/main.js"></script>
+  <script src="/CarbonTracker/resources/assets/js/main.js"></script>
 
 </body>
 </html>

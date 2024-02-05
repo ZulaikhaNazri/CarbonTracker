@@ -8,6 +8,7 @@
 <title>Carbon Tracker</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  
 <link href="resources/assets/img/favicon.png" rel="icon">
 <link href="resources/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -30,7 +31,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="AdminIndex" class="logo d-flex align-items-center">
         <img src="resources/assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">CarbonTracker</span>
       </a>
@@ -45,22 +46,32 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="resources/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Zulaikha Nazri</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">${loggedInAdmin.name}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Zulaikha Nazri</h6>
-              <span>Web Designer</span>
+              <h6>${loggedInAdmin.name}</h6>
+              <span>Admin</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="ProfileAdmin">
+                <i class="bi bi-person"></i>
+                <span>Profile Saya</span>
+              </a>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="logout">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+                <span>Log Keluar</span>
               </a>
             </li>
 
@@ -78,7 +89,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="AdminIndex">
           <i class="bi bi-grid"></i>
           <span>Laman Utama</span>
         </a>
@@ -90,12 +101,7 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
-              <i class="bi bi-circle"></i><span>Analisis Karbon Keseluruhan</span>
-            </a>
-          </li>
-          <li>
-            <a href="BorangAir.jsp">
+            <a href="BorangAir">
               <i class="bi bi-circle"></i><span>Penggunaan Air</span>
             </a>
           </li>
@@ -105,7 +111,7 @@
             </a>
           </li>
           <li>
-            <a href="BorangKitarSemula.jsp">
+            <a href="BorangKitarSemula">
               <i class="bi bi-circle"></i><span>Kegunaan Bahan Kitar Semula</span>
             </a>
           </li>
@@ -113,25 +119,34 @@
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="RekodBulanan.jsp">
+        <a class="nav-link collapsed" href="RekodBulanan">
           <i class="bi bi-calendar-month"></i>
           <span>Rekod Bulanan</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="RekodPenyertaan.jsp">
+        <a class="nav-link collapsed" href="RekodPenyertaan">
           <i class="bi bi-folder2"></i>
           <span>Rekod Penyertaan</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
+        <a class="nav-link collapsed" href="RekodPengguna">
+          <i class="bi bi-person"></i>
+          <span>Pengguna</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="ProfileAdmin">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
-      </li><!-- End Contact Page Nav -->
+      </li>
+      
+      <!-- End Contact Page Nav -->
 
 
     </ul>
@@ -144,8 +159,8 @@
       <h1>Laman Utama</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Laman Utama</li>
+          <li class="breadcrumb-item"></li>
+          <li class="breadcrumb-item active"><a href="AdminIndex">Laman Utama</a></li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
