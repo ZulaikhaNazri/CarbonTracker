@@ -32,6 +32,12 @@ public class PageController {
 		return model;
 	}
 	
+	@RequestMapping("/BorangElektrik")
+	protected ModelAndView getBorangElektrik( ) {
+		ModelAndView model = new ModelAndView("BorangElektrik");
+		return model;
+	}
+	
 	@RequestMapping("/BorangKitarSemula")
 	protected ModelAndView getBorangKitarSemula( ) {
 		ModelAndView model = new ModelAndView("BorangKitarSemula");
@@ -53,6 +59,18 @@ public class PageController {
 	@RequestMapping("/RekodAir")
 	protected ModelAndView getRekodAir( ) {
 		ModelAndView model = new ModelAndView("RekodAir");
+		return model;
+	}
+	
+	@RequestMapping("/RekodElektrik")
+	protected ModelAndView getRekodElektrik( ) {
+		ModelAndView model = new ModelAndView("RekodElektrik");
+		return model;
+	}
+	
+	@RequestMapping("/RekodKitarSemula")
+	protected ModelAndView getRekodKitarSemula( ) {
+		ModelAndView model = new ModelAndView("RekodKitarSemula");
 		return model;
 	}
 	

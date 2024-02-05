@@ -48,7 +48,7 @@ public class WaterDAO {
 		//add
 		public int add(Water water){
 			String sql = "insert into water (id, userId, bulan, bilangan_hari, faktor_prorata, jumlah_air, jumlah_bayaran, jumlah_karbon) values (?, ?, ?, ?, ?, ?, ?, ?)";
-			Object args[] = {water.getId(),water.getUserID(), water.getBulan(), water.getBilangan_hari(), water.getFaktor_prorata(), water.getJumlah_air(), water.getJumlah_bayaran(), water.getJumlah_karbon()};
+			Object args[] = {water.getId(), water.getUserID(), water.getBulan(), water.getBilangan_hari(), water.getFaktor_prorata(), water.getJumlah_air(), water.getJumlah_bayaran(), water.getJumlah_karbon()};
 			int rowAffected = jdbct.update(sql, args);
 			return rowAffected;
 		}
@@ -61,8 +61,8 @@ public class WaterDAO {
 		}
 		// update
 		public int update(Water water) {
-		    String sql = "UPDATE water SET id=?, userId=?, bulan=?, bilangan_hari=?, faktor_prorata=?, jumlah_air=?, jumlah_bayaran=?, jumlah_karbon=? WHERE id=?";
-		    Object[] args = {water.getId(),water.getUserID(), water.getBulan(), water.getBilangan_hari(), water.getFaktor_prorata(), water.getJumlah_air(), water.getJumlah_bayaran(), water.getJumlah_karbon() };
+		    String sql = "UPDATE water SET bulan=?, bilangan_hari=?, faktor_prorata=?, jumlah_air=?, jumlah_bayaran=?, jumlah_karbon=? WHERE id=?";
+		    Object[] args = {water.getBulan(), water.getBilangan_hari(), water.getFaktor_prorata(), water.getJumlah_air(), water.getJumlah_bayaran(), water.getJumlah_karbon(), water.getId() };
 		    int rowAffected = jdbct.update(sql, args);
 		    return rowAffected;
 		}

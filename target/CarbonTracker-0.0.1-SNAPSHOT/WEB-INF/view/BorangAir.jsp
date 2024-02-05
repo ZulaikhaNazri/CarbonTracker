@@ -46,13 +46,13 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="resources/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Zulaikha Nazri</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">${loggedInUser.name}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Zulaikha Nazri</h6>
-              <span>Web Designer</span>
+              <h6>${loggedInUser.name}</h6>
+              <span>${loggedInUser.category}</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -61,7 +61,7 @@
             <li>
               <a class="dropdown-item d-flex align-items-center" href="Profile">
                 <i class="bi bi-person"></i>
-                <span>My Profile</span>
+                <span>Profile Saya</span>
               </a>
             </li>
             <li>
@@ -69,9 +69,9 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="logout">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+                <span>Log Keluar</span>
               </a>
             </li>
 
@@ -101,17 +101,12 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
-              <i class="bi bi-circle"></i><span>Analisis Karbon Keseluruhan</span>
-            </a>
-          </li>
-          <li>
             <a href="BorangAir">
               <i class="bi bi-circle"></i><span>Penggunaan Air</span>
             </a>
           </li>
           <li>
-            <a href="components-badges.html">
+            <a href="BorangElektrik">
               <i class="bi bi-circle"></i><span>Penggunaan Elektrik</span>
             </a>
           </li>
@@ -188,6 +183,15 @@
                       <option value="Januari">Januari</option>
                       <option value="Februari">Februari</option>
                       <option value="Mac">Mac</option>
+                      <option value="April">April</option>
+                      <option value="May">May</option>
+                      <option value="June">June</option>
+                      <option value="July">July</option>
+                      <option value="August">August</option>
+                      <option value="September">September</option>
+                      <option value="October">October</option>
+                      <option value="November">November</option>
+                      <option value="December">December</option>
                     </select>
                   </div>
                 </div>

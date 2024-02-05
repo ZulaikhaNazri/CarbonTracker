@@ -100,7 +100,7 @@
             </a>
           </li>
           <li>
-            <a href="components-badges.html">
+            <a href="BorangElektrik.jsp">
               <i class="bi bi-circle"></i><span>Penggunaan Elektrik</span>
             </a>
           </li>

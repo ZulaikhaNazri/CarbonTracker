@@ -106,7 +106,7 @@
             </a>
           </li>
           <li>
-            <a href="components-badges.html">
+            <a href="BorangElektrik">
               <i class="bi bi-circle"></i><span>Penggunaan Elektrik</span>
             </a>
           </li>

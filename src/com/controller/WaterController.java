@@ -26,7 +26,7 @@ public class WaterController {
 		WaterDAO watdao = new WaterDAO();
 		List<Water> wlist = watdao.getAll();
 		model.addObject("wlist", wlist);
-		model.addObject("currentView", "getAll");
+		//model.addObject("currentView", "getAll");
 		
 		return model;
 	}
