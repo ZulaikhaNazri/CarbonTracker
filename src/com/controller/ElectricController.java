@@ -70,8 +70,8 @@ public class ElectricController {
     						@RequestParam ("jumlah_bayaran") double jumlah_bayaran) {
         ModelAndView modelAndView = new ModelAndView("ElectricResponsePage");
         Electric Electric = new Electric();
-        Electric.setId(id);
-		Electric.setUserId(userId);
+        Electric.setId(Integer.parseInt(id));
+		Electric.setUserId(Integer.parseInt(userId));
 		Electric.setBulan(bulan);
 		Electric.setBilangan_hari(bilangan_hari);
 		Electric.setFaktor_prorata(faktor_prorata);
@@ -104,7 +104,7 @@ public class ElectricController {
 								@RequestParam ("jumlah_bayaran") double jumlah_bayaran) {
         ModelAndView modelAndView = new ModelAndView("ElectricConfirmation");
         Electric Electric = ElectricDAO.getById(Integer.parseInt(id));
-		Electric.setUserId(userId);
+		Electric.setUserId(Integer.parseInt(userId));
 		Electric.setBulan(bulan);
 		Electric.setBilangan_hari(bilangan_hari);
 		Electric.setFaktor_prorata(faktor_prorata);

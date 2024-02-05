@@ -2,7 +2,7 @@ package com.model;
 
 public class Electric {
 	
-	private String id;
+	private int id;
 	private String bulan;
 	private int bilangan_hari;
 	private double faktor_prorata;
@@ -15,7 +15,7 @@ public class Electric {
 	public Electric() {
 	}
 	
-	public Electric(String id, String userId, String bulan, int bilangan_hari, double faktor_prorata, double jumlah_elektrik,
+	public Electric(int id, int userId, String bulan, int bilangan_hari, double faktor_prorata, double jumlah_elektrik,
 			double jumlah_bayaran) {
 		super();
 		this.id = id;
@@ -27,20 +27,20 @@ public class Electric {
 		this.jumlah_bayaran = jumlah_bayaran;
 	}
 	
-	public String getUserId() {
-		String userid = user.getId();
+	public int getUserId() {
+		int userid = user.getId();
 		return userid;
 	}
 	
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		user.setId(userId);
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.bdUtil.InstructorDAO;
 import com.bdUtil.WaterDAO;
-import com.model.Instructor;
 import com.model.Water;
 
 @Controller
@@ -38,7 +36,7 @@ public class WaterController {
 	public ModelAndView getById(HttpServletRequest req) {
 		ModelAndView model = new ModelAndView("RekodAir");
 		try {
-			String id = req.getParameter("id");
+			int id = Integer.parseInt(req.getParameter("id"));
 			WaterDAO watdao = new WaterDAO();
 			Water water = watdao.getById(id);
 			
