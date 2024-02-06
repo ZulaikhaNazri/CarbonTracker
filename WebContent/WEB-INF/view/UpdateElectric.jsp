@@ -170,34 +170,42 @@
 	           	 <div class="card-body">
 	           	 <h5 class="card-title">Pilih : </h5>
 					<button type="button" class="btn btn-outline-primary active">Borang Penggunaan elektrik</button>
-					<button type="button" class="btn btn-outline-primary" onclick="window.location.href='RekodElektrik'">Rekod Penggunaan elektrik</button>
+					<button type="button" class="btn btn-outline-primary" ><a href="RekodElektrik">Rekod Penggunaan elektrik</a></button>
 				 </div>
 				</div>
 			<div class="card">
             <div class="card-body">
-              <h5 class="card-title">Borang Penggunaan elektrik</h5>
+              <h5 class="card-title">Rekod Penggunaan elektrik</h5>
 
               <!-- General Form Elements -->
              
-              <form action="<c:url value='/RekodElektrik/add'/>" method="post">
+              <form action="<c:url value='/RekodElektrik/update?id=${elektrikId}'/>" method="post">
               	<div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Tarikh</label>
+                  <label class="col-sm-2 col-form-label" for="id">ID</label>
                   <div class="col-sm-10">
                     <div class="col-sm-10">
-                    <input type="text" class="form-control" name="tarikh" placeholder="e.g : 1/1/2024">
-                  </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Faktor Prorata</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="faktor_prorata" placeholder="e.g : 1.000000"> <!--tukar sini-->
+                    <input type="text" class="form-control" name="id" value="${elektrikId}" readonly>
+                  	</div>
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Bilangan Hari</label>
+                  <label class="col-sm-2 col-form-label" for="tarikh">Tarikh</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example" name = "bilangan_hari">
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="tarikh" required>
+                  	</div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label" for="faktor_prorata">Faktor Prorata</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="faktor_prorata" placeholder="e.g : 1.000" required> <!--tukar sini-->
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="bilangan_hari">Bilangan Hari</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example" name = "bilangan_hari" required>
                       <option selected>Pilih</option>
                       <option value="28">28</option>
                       <option value="29">29</option>
@@ -206,24 +214,25 @@
                     </select>
                   </div>
                 </div>
-               
                  <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Penggunaan Elektrik(kWh):</label>
+                  <label for="inputText" class="col-sm-2 col-form-label" for="jumlah_elektrik">Jumlah Penggunaan Elektrik(kWh):</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="jumlah_elektrik">
+                    <input type="text" class="form-control" name="jumlah_elektrik" required>
                   </div>
                 </div>
                  <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Bayaran Penggunaan (RM):</label>
+                  <label for="inputText" class="col-sm-2 col-form-label" for="jumlah_bayaran">Jumlah Bayaran Penggunaan (RM):</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="jumlah_bayaran">
+                    <input type="text" class="form-control" name="jumlah_bayaran" required>
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label"></label>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Hantar Borang</button>
+                    <button type="submit" class="btn btn-primary">Kemaskini</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='<c:url value='/RekodElektrik' />'">Batal</button>
+                    
                   </div>
                 </div>
 

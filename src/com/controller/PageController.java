@@ -51,12 +51,6 @@ public class PageController {
 		return model;
 	}
 
-	@RequestMapping("/BorangElektrik")
-	protected ModelAndView getBorangElektrik() {
-		ModelAndView model = new ModelAndView("BorangElektrik");
-		return model;
-	}
-
 	@RequestMapping("/RekodBulanan")
 	protected ModelAndView getRekodBulanan() {
 		ModelAndView model = new ModelAndView("RekodBulanan");
@@ -105,6 +99,23 @@ public class PageController {
 		return model;
 	}
 
+	@RequestMapping("/UpdateAir")
+	protected ModelAndView getUpdateAir(@RequestParam(name = "id", required = true) int id) {
+		ModelAndView model = new ModelAndView("UpdateAir");
+		// can add the id to the model if needed
+		
+		model.addObject("waterId", id);
+		return model;
+	}
+	
+	@RequestMapping("/UpdateElectric")
+	protected ModelAndView getUpdateElectric(@RequestParam(name = "id", required = true) int id) {
+		ModelAndView model = new ModelAndView("UpdateElectric");
+		// can add the id to the model if needed
+		model.addObject("electricId", id);
+		return model;
+	}
+	
 	@RequestMapping("/UpdateRecycle")
 	protected ModelAndView getUpdateRecycle(@RequestParam(name = "id", required = true) int id) {
 		ModelAndView model = new ModelAndView("UpdateRecycle");

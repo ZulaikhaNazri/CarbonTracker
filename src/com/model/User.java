@@ -10,13 +10,23 @@ public class User {
 	private String username;
 	private String password;
 
+	public User() {
+			
+		}
 	public User(int id, String name, String address, String email, String category, String username, String password) {
-
+		this.id = id;
+		this.name = name;
+		this.address = address;
+		this.email = email;
+		this.category = category;
+		this.username = username;
+		this.password = password;
 	}
 
 	public User(int id) {
 		this.id = id;
 	}
+	
 
 	public int getId() {
 		return id;

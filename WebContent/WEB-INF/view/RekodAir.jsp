@@ -4,26 +4,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #ddd; /* Add a 1px solid border around the table */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd; /* Add a 1px solid border to table cells */
+    padding: 8px;
+    text-align: left;
+}
+</style>
 <meta charset="ISO-8859-1">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Carbon Tracker</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-<link href="resources/assets/img/favicon.png" rel="icon">
-<link href="resources/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="/CarbonTracker/resources/assets/img/favicon.png" rel="icon">
+<link href="/CarbonTracker/resources/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="resources/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="resources/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="resources/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="resources/assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="resources/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="resources/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="resources/assets/vendor/simple-datatables/style.css" rel="stylesheet">
-  <link href="resources/assets/css/style.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="/CarbonTracker/resources/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -31,8 +45,8 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="LamanUtama" class="logo d-flex align-items-center">
-        <img src="resources/assets/img/logo.png" alt="">
+      <a href="Home" class="logo d-flex align-items-center">
+        <img src="/CarbonTracker/resources/assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">CarbonTracker</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -57,8 +71,8 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            
-            <li>
+
+          <li>
               <a class="dropdown-item d-flex align-items-center" href="Profile">
                 <i class="bi bi-person"></i>
                 <span>Profile Saya</span>
@@ -89,7 +103,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="LamanUtama">
+        <a class="nav-link " href="/CarbonTracker/UserIndex">
           <i class="bi bi-grid"></i>
           <span>Laman Utama</span>
         </a>
@@ -101,17 +115,17 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="BorangAir">
+            <a href="/CarbonTracker/BorangAir">
               <i class="bi bi-circle"></i><span>Penggunaan Air</span>
             </a>
           </li>
           <li>
-            <a href="BorangElektrik">
+            <a href="/CarbonTracker/BorangElektrik">
               <i class="bi bi-circle"></i><span>Penggunaan Elektrik</span>
             </a>
           </li>
           <li>
-            <a href="BorangKitarSemula">
+            <a href="/CarbonTracker/BorangKitarSemula">
               <i class="bi bi-circle"></i><span>Kegunaan Bahan Kitar Semula</span>
             </a>
           </li>
@@ -119,21 +133,21 @@
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="RekodBulanan">
+        <a class="nav-link collapsed" href="/CarbonTracker/RekodBulanan">
           <i class="bi bi-calendar-month"></i>
           <span>Rekod Bulanan</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="RekodPenyertaan">
+        <a class="nav-link collapsed" href="/CarbonTracker/RekodPenyertaan">
           <i class="bi bi-folder2"></i>
           <span>Rekod Penyertaan</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="Profile">
+        <a class="nav-link collapsed" href="pages-contact.html">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
@@ -150,7 +164,7 @@
       <h1>Penggunaan Air</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="LamanUtama">Laman Utama</a></li>
+          <li class="breadcrumb-item"><a href="Home">Laman Utama</a></li>
           <li class="breadcrumb-item">Analisis Karbon</li>
           <li class="breadcrumb-item active">Penggunaan Air</li>
         </ol>
@@ -164,21 +178,27 @@
 	          	<div class="card">
 	           	 <div class="card-body">
 	           	 <h5 class="card-title">Pilih : </h5>
-					<button type="button" class="btn btn-outline-primary"><a href="BorangAir">Borang Penggunaan Air</a></button>
-					<button type="button" class="btn btn-outline-primary active">Rekod Penggunaan Air</button>
+					<button type="button" class="btn btn-outline-primary"><a href="/CarbonTracker/BorangAir">Borang Penggunaan Air</a></button>
+					<button type="button" class="btn btn-outline-primary active"><a href="RekodAir">Rekod Penggunaan Air</a></button>
 				 </div>
 				</div>
 			
 				<div class="card">
             <div class="card-body">
               <h5 class="card-title">Rekod Penggunaan Air</h5>
+              <form action="<c:url value='/RekodAir/getById'/>" method="post">
+			  <label for="id">Cari ID:</label> 
+			  <input type="text" name="id" style="width: 80px; ">
+			  <button class = "button" type="submit">Search</button>
+			  </form>
 
               <!-- Table with stripped rows -->
               <table class="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Bulan</th>
+                   
+                    <th scope="col">tarikh</th>
                     <th scope="col">Bilangan Hari</th>
                     <th scope="col">Faktor Prorata</th>
                     <th scope="col">Jumlah Penggunaan Air(m³)</th>
@@ -188,20 +208,23 @@
                   </tr>
                 </thead>
                 <tbody>
-                 <c:forEach items="${wList}" var="water" >
+                 <c:forEach items="${wlist}" var="water" >
 				<tr>
 					<td>${water.id}</td>
-					<td>${water.bulan}</td>
+					
+					<td>${water.tarikh}</td>
 					<td>${water.bilangan_hari}</td>
 					<td>${water.faktor_prorata}</td>
 					<td>${water.jumlah_air}</td>
 					<td>${water.jumlah_bayaran}</td>
 					<td>${water.jumlah_karbon}</td>
-					<td><a class="button" href="<c:url value='/water/update?id=${water.id}'/>">Ubah</a>
-						<a class="button" href="<c:url value='/water/delete?id=${water.id}'/>">Padam</a>
+					<td><a class="button" href="<c:url value='/UpdateAir?id=${water.id}'/>">Ubah</a>
+						<a class="button" href="<c:url value='/RekodAir/delete?id=${water.id}'/>">Padam</a>
 					</td>
 				</tr>
 				</c:forEach>
+				
+				
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
@@ -234,17 +257,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="resources/assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="resources/assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="resources/assets/vendor/echarts/echarts.min.js"></script>
-  <script src="resources/assets/vendor/quill/quill.min.js"></script>
-  <script src="resources/assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="resources/assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="resources/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/quill/quill.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="/CarbonTracker/resources/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="resources/assets/js/main.js"></script>
+  <script src="/CarbonTracker/resources/assets/js/main.js"></script>
 
 </body>
 </html>

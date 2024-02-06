@@ -3,7 +3,8 @@ package com.model;
 public class Electric {
 	
 	private int id;
-	private String bulan;
+	private int userId;
+	private String tarikh;
 	private int bilangan_hari;
 	private double faktor_prorata;
 	private double jumlah_elektrik;
@@ -15,12 +16,12 @@ public class Electric {
 	public Electric() {
 	}
 	
-	public Electric(int id, int userId, String bulan, int bilangan_hari, double faktor_prorata, double jumlah_elektrik,
+	public Electric(int id, int userId, String tarikh, int bilangan_hari, double faktor_prorata, double jumlah_elektrik,
 			double jumlah_bayaran) {
 		super();
 		this.id = id;
-		setUserId(userId);
-		this.bulan = bulan;
+		//setUserId(userId);
+		this.tarikh = tarikh;
 		this.bilangan_hari = bilangan_hari;
 		this.faktor_prorata = faktor_prorata;
 		this.jumlah_elektrik = jumlah_elektrik;
@@ -33,7 +34,8 @@ public class Electric {
 	}
 	
 	public void setUserId(int userId) {
-		user.setId(userId);
+		user = new User(userId);
+		this.userId = userId;
 	}
 
 	public int getId() {
@@ -44,12 +46,12 @@ public class Electric {
 		this.id = id;
 	}
 
-	public String getBulan() {
-		return bulan;
+	public String getTarikh() {
+		return tarikh;
 	}
 
-	public void setBulan(String bulan) {
-		this.bulan = bulan;
+	public void setTarikh(String tarikh) {
+		this.tarikh = tarikh;
 	}
 
 	public int getBilangan_hari() {
@@ -94,7 +96,7 @@ public class Electric {
 
 	@Override
 	public String toString() {
-		return "ElectricDAO [id=" + id + ", bulan=" + bulan + ", bilangan_hari=" + bilangan_hari + ", faktor_prorata="
+		return "ElectricDAO [id=" + id + ", tarikh=" + tarikh + ", bilangan_hari=" + bilangan_hari + ", faktor_prorata="
 				+ faktor_prorata + ", jumlah_elektrik=" + jumlah_elektrik + ", jumlah_bayaran=" + jumlah_bayaran
 				+ ", jumlah_karbon=" + jumlah_karbon + "]";
 	}

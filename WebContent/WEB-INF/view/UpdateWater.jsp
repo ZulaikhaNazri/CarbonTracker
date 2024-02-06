@@ -152,12 +152,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Penggunaan Elektrik</h1>
+      <h1>Penggunaan Air</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="LamanUtama">Laman Utama</a></li>
           <li class="breadcrumb-item">Analisis Karbon</li>
-          <li class="breadcrumb-item active">Penggunaan Elektrik</li>
+          <li class="breadcrumb-item active">Penggunaan Air</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -169,33 +169,27 @@
 	          	<div class="card">
 	           	 <div class="card-body">
 	           	 <h5 class="card-title">Pilih : </h5>
-					<button type="button" class="btn btn-outline-primary active">Borang Penggunaan elektrik</button>
-					<button type="button" class="btn btn-outline-primary" onclick="window.location.href='RekodElektrik'">Rekod Penggunaan elektrik</button>
+					<button type="button" class="btn btn-outline-primary active">Borang Penggunaan Air</button>
+					<button type="button" class="btn btn-outline-primary" ><a href="RekodAir">Rekod Penggunaan Air</a></button>
 				 </div>
 				</div>
 			<div class="card">
             <div class="card-body">
-              <h5 class="card-title">Borang Penggunaan elektrik</h5>
+              <h5 class="card-title">Rekod Penggunaan Air</h5>
 
               <!-- General Form Elements -->
              
-              <form action="<c:url value='/RekodElektrik/add'/>" method="post">
+              <form action="<c:url value='/RekodAir/update?id=${waterId}'/>" method="post">
               	<div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Tarikh</label>
+                  <label class="col-sm-2 col-form-label" for="id">ID</label>
                   <div class="col-sm-10">
                     <div class="col-sm-10">
-                    <input type="text" class="form-control" name="tarikh" placeholder="e.g : 1/1/2024">
-                  </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Faktor Prorata</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="faktor_prorata" placeholder="e.g : 1.000000"> <!--tukar sini-->
+                    <input type="text" class="form-control" name="id" value="${waterId}" readonly>
+                  	</div>
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Bilangan Hari</label>
+                  <label class="col-sm-2 col-form-label" for="bilangan_hari">Bilangan Hari</label>
                   <div class="col-sm-10">
                     <select class="form-select" aria-label="Default select example" name = "bilangan_hari">
                       <option selected>Pilih</option>
@@ -206,24 +200,44 @@
                     </select>
                   </div>
                 </div>
+                
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="tarikh">Tarikh</label>
+                  <div class="col-sm-10">
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="tarikh" required>
+                  	</div>
+                  </div>
+                </div>
+				<div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="faktor_prorata">Faktor_Prorata</label>
+                  <div class="col-sm-10">
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="faktor_prorata" required>
+                  	</div>
+                  </div>
+                </div>
                
                  <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Penggunaan Elektrik(kWh):</label>
+                  <label for="inputText" class="col-sm-2 col-form-label" for="jumlah_air">Jumlah Penggunaan Air (m3):</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="jumlah_elektrik">
+                    <input type="text" class="form-control" name="jumlah_air" required>
                   </div>
                 </div>
                  <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Jumlah Bayaran Penggunaan (RM):</label>
+                  <label for="inputText" class="col-sm-2 col-form-label" for="jumlah_bayaran">Jumlah Bayaran Penggunaan (RM):</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="jumlah_bayaran">
+                    <input type="text" class="form-control" name="jumlah_bayaran" required>
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label"></label>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Hantar Borang</button>
+                    <button type="submit" class="btn btn-primary">Kemaskini</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='RekodAir'">Batal</button>
+					
+                    
                   </div>
                 </div>
 

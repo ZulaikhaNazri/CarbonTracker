@@ -2,10 +2,8 @@ package com.controller;
 
 import com.bdUtil.AdminDAO;
 import com.bdUtil.UserDAO;
-import com.bdUtil.WaterDAO;
 import com.model.Admin;
 import com.model.User;
-import com.model.Water;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -37,8 +37,7 @@ public class RecycleController {
 	public ModelAndView getById(HttpServletRequest req) {
 		ModelAndView model = new ModelAndView("RekodRecycle");
 		try {
-			String idParam = req.getParameter("id");
-			int id = Integer.parseInt(idParam);
+			int id = Integer.parseInt(req.getParameter("id"));
 			RecycleDAO recdao = new RecycleDAO();
 			Recycle recycle = recdao.getById(id);
 			

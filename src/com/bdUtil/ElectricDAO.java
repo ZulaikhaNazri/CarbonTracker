@@ -46,8 +46,8 @@ public class ElectricDAO {
 	
 	//add
 	public int add(Electric elec){
-	    String sql = "INSERT into electric (id, userId, bulan, bilangan_hari, faktor_prorata, jumlah_elektrik, jumlah_bayaran, jumlah_karbon) values (?, ?, ?, ?, ?, ?, ?, ?)";
-	    Object args[] = {elec.getId(), elec.getUserId(), elec.getBulan(), elec.getBilangan_hari(), elec.getFaktor_prorata(), elec.getJumlah_elektrik(), elec.getJumlah_bayaran(), elec.getJumlah_karbon()};
+	    String sql = "INSERT into electric (tarikh, bilangan_hari, faktor_prorata, jumlah_elektrik, jumlah_bayaran, jumlah_karbon) values (?, ?, ?, ?, ?, ?)";
+	    Object args[] = {elec.getTarikh(), elec.getBilangan_hari(), elec.getFaktor_prorata(), elec.getJumlah_elektrik(), elec.getJumlah_bayaran(), elec.getJumlah_karbon()};
 	    int rowAffected = jdbct.update(sql, args);
 	    return rowAffected;
 	}
@@ -60,8 +60,8 @@ public class ElectricDAO {
 	}
 	// update
 	public int update(Electric elec) {
-	    String sql = "UPDATE electric SET bulan=?, bilangan_hari=?, faktor_prorata=?, jumlah_elektrik=?, jumlah_bayaran=?, jumlah_karbon=? WHERE id=?";		   
-	    Object[] args = { elec.getBulan(), elec.getBilangan_hari(), elec.getFaktor_prorata(), elec.getJumlah_elektrik(), elec.getJumlah_bayaran(), elec.getJumlah_karbon(), elec.getId() };
+	    String sql = "UPDATE electric SET tarikh=?, bilangan_hari=?, faktor_prorata=?, jumlah_elektrik=?, jumlah_bayaran=?, jumlah_karbon=? WHERE id=?";		   
+	    Object[] args = { elec.getTarikh(), elec.getBilangan_hari(), elec.getFaktor_prorata(), elec.getJumlah_elektrik(), elec.getJumlah_bayaran(), elec.getJumlah_karbon(), elec.getId() };
 	    int rowAffected = jdbct.update(sql, args);
 	    return rowAffected;
 	}
